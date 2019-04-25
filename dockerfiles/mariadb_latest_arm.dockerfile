@@ -62,6 +62,6 @@ RUN \
 
 VOLUME /var/lib/mysql
 
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/docker_entrypoint.sh"]
 
 CMD ["mysqld"]
