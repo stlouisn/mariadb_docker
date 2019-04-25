@@ -178,4 +178,5 @@ if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
 fi
 
 # Start mysql in interactive mode
+echo >&2 "$@"
 gosu mysql exec "$@"
