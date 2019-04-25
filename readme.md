@@ -16,7 +16,7 @@
 [![Docker Pulls][docker_pulls_logo]][docker_hub_url]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system.
+MariaDB is a community-developed fork of the MySQL relational database management system.
 
 ### Tags
 
