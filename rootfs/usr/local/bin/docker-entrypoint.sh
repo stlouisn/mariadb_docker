@@ -65,17 +65,17 @@ _get_config() {
 	# match "datadir      /some/path with/spaces in/it here" but not "--xyz=abc\n     datadir (xyz)"
 }
 
-# allow the container to be started with `--user`
-if [ "$1" = 'mysqld' -a -z "$wantHelp" -a "$(id -u)" = '0' ]; then
-	_check_config "$@"
-	DATADIR="$(_get_config 'datadir' "$@")"
-	mkdir -p "$DATADIR"
-	find "$DATADIR" \! -user mysql -exec chown mysql '{}' +
-	exec gosu mysql "$BASH_SOURCE" "$@"
-fi
+## allow the container to be started with `--user`
+#if [ "$1" = 'mysqld' -a -z "$wantHelp" -a "$(id -u)" = '0' ]; then
+#	_check_config "$@"
+#	DATADIR="$(_get_config 'datadir' "$@")"
+#	mkdir -p "$DATADIR"
+#	find "$DATADIR" \! -user mysql -exec chown mysql '{}' +
+#	exec gosu mysql "$BASH_SOURCE" "$@"
+#fi
 
 if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
-	# still need to check config, container may have started with --user
+	# Check config
 	_check_config "$@"
 	# Get config
 	DATADIR="$(_get_config 'datadir' "$@")"
@@ -197,4 +197,5 @@ if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
 	fi
 fi
 
+# change to gosu mysql
 exec "$@"
