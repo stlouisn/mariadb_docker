@@ -28,7 +28,7 @@ RUN \
     # Install mariadb
     apt-get install -y --no-install-recommends \
         mariadb-client \
-		#mariadb-backup \ ## ADD ONCE ROLLING = DISCO
+		mariadb-backup \
         mariadb-server && \
 
 	# Purge and re-create /var/lib/mysql with appropriate ownership
