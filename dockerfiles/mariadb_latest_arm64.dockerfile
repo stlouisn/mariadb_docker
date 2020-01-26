@@ -31,6 +31,10 @@ RUN \
 		mariadb-backup \
         mariadb-server && \
 
+    # Install pwgen
+    apt-get install -y --no-install-recommends \
+        pwgen && \
+
 	# Purge and re-create /var/lib/mysql with appropriate ownership
 	rm -rf /var/lib/mysql && \
 	mkdir -p /var/lib/mysql && \
