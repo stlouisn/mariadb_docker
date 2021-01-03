@@ -1,5 +1,5 @@
-[travis_logo]: https://travis-ci.org/stlouisn/mariadb_docker.svg?branch=master
-[travis_url]: https://travis-ci.org/stlouisn/mariadb_docker
+[travis_logo]: https://travis-ci.com/stlouisn/mariadb_docker.svg?branch=master
+[travis_url]: https://travis-ci.com/stlouisn/mariadb_docker
 [docker_stars_logo]: https://img.shields.io/docker/stars/stlouisn/mariadb.svg
 [docker_pulls_logo]: https://img.shields.io/docker/pulls/stlouisn/mariadb.svg
 [docker_hub_url]: https://hub.docker.com/r/stlouisn/mariadb
